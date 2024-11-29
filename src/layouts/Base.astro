@@ -1,0 +1,33 @@
+---
+import "./main.css";
+import { AstroFont } from "astro-font";
+---
+
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>RZA Tecnologia</title>
+
+		<AstroFont
+			config={[
+			{
+				src: [],
+				name: "Urbanist",
+				// Google Fonts URL
+				googleFontsURL: 'https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap',
+				preload: true,
+				display: "swap",
+				selector: "body",
+				fallback: "sans-serif",
+			},
+			]}
+		/>
+
+	</head>
+	<body class=" min-h-screen bg-white selection:bg-primary/10 selection:text-primary dark:bg-gray-900">
+		<slot />
+	</body>
+</html>
